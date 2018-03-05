@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<canvas id="myCanvas" width="300" height="300"/>
+<script type="text/javascript">
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+    //绘制矩形
+    context.fillStyle = "#FF0000";
+    context.fillRect(50,50,150,100);
+    //绘制对角线
+    context.strokeStyle="#FF0000";
+    context.moveTo(0,0);
+    context.lineTo(50,50);
+    context.stroke();
+    //绘制三角形
+    context.strokeStyle="#FF0000";
+    context.lineTo(200,150);
+    context.lineTo(200,200);
+    context.lineTo(250.200);
+    context.lineTo(200,150);
+    context.stroke();
+    //圆角连线
+    context.beginPath();
+    context.moveTo(220,50);
+    context.lineTo(300,50);
+    context.closePath();
+    context.lineWidth = 8;
+    context.strokeStyle="#FF0000";
+    context.lineJoin = "round";
+    context.stroke();
+
+    context.beginPath();
+    context.moveTo(220,60);
+    context.lineTo(220,100);
+    context.lineTo(300,100);
+    context.lineTo(300,60);
+    context.lineTo(220,60);
+    context.closePath();
+    context.lineWidth = 10;
+    context.strokeStyle = "#FF0000";
+    context.lineJoin = "round";
+    context.stroke();
+
+   
+</script>
+</html>
